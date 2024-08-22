@@ -2,13 +2,13 @@
 
 ## Descrição
 
-Este desafio de código é parte da masterclass do @cartesiproject no Brasil, realizada no Inteli. Os participantes devem documentar todo o processo em um README e compartilhar um vídeo no Twitter|X.
+Este desafio de código é parte da masterclass do @cartesiproject no Brasil, realizada no ITA. Os participantes devem documentar todo o processo em um README e compartilhar um vídeo no Twitter|X.
 
 ## Instruções do Desafio
 
 1.  **Encontrar os Valores Corretos**:
     
-    -   Utilize o código fornecido para identificar o valor correto que deve ser adivinhado (guess), bem como outro valor que advém de uma "charada" (birth_year_minus_the_guess). Assim que você conseguir gerar o output correto, mostre-o no explorer que roda na rota: http://localhost:8080/explorer/, faça o "decode" da payload (hex) e mostre a string gerada. Corra! Você precisa ser o primeiro a postar no Twitter|X juntamente com um README.md e um vídeo refazendo os inputs até o decode da string para ganhar o prêmio.
+    -   Utilize o código fornecido para identificar o valor correto que deve ser adivinhado (guess), bem como outro valor que advém de uma "charada" (birth_year). Assim que você conseguir gerar o output correto, mostre-o no explorer que roda na rota: http://localhost:8080/explorer/, faça o "decode" da payload (hex) e mostre a string gerada. Corra! Você precisa ser o primeiro a postar no Twitter|X juntamente com um README.md e um vídeo refazendo os inputs até o decode da string para ganhar o prêmio.
 
 2.  **Documentar o Processo**:
     
@@ -21,14 +21,11 @@ Este desafio de código é parte da masterclass do @cartesiproject no Brasil, re
 
 ## Template de Mensagem
 ```text
-Estou participando da masterclass da @cartesiproject no Brasil, que está acontecendo no Inteli. 
-Aqui está um vídeo demonstrando a resolução do code challenge apresentado hoje. Acesse o link [hyperlink], para ver o README onde explico como resolvi esse desafio. #RollupWithCartesi #CartesiMasterclass
+Estou participando da masterclass da @cartesiproject no Brasil, que está acontecendo no ITA. 
+Aqui está um vídeo demonstrando a resolução do code challenge apresentado hoje pelo @henrimarlon_ e @joaopdgarcia. 
 ```
 
-## Dicas
-
--   Você pode utilizar o nonodo para testar mais rapidamente. Nesse caso, o endereço a ser utilizado no `cartesi send` é: 0x70ac08179605AF2D9e75782b8DEcDD3c22aA4D0C
--   Em modo de produção, você pode utilizar o endereço padrão: 0xab7528bb862fb57e8a2bcd567a2e929a0be56a5e
+**Crie uma thread e compartilhe o link para a o github e o video ( O horário da última mensagem da thread vai servir para a classificação ).**
 
 ## Passo a Passo
 
@@ -37,7 +34,7 @@ Aqui está um vídeo demonstrando a resolução do code challenge apresentado ho
 1.  Clone o repositório:
     
 ```bash
-git clone https://github.com/henriquemarlon/cartesi-code-challenge-2.git
+git clone https://github.com/henriquemarlon/cartesi-code-challenge.git
 ```
 
 ### 2. Rodando o Código
@@ -52,11 +49,11 @@ cartesi run
 
 ```bash
 cartesi send generic \
-    --dapp=<endereço-do-dapp> \
+    --dapp=0xab7528bb862fb57e8a2bcd567a2e929a0be56a5e \
     --chain-id=31337 \
     --rpc-url=http://127.0.0.1:8545 \
     --mnemonic-passphrase='test test test test test test test test test test test junk' \
-    --input='{"guess": <valor-aqui>, "birth_year_minus_the_guess": <valor-aqui>}'
+    --input='{"guess": <valor-aqui>, "birth_year": <valor-aqui>}'
 ```
 
 Envie quantas inputs achar necessário para encontrar os valores certos!
